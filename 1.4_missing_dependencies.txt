@@ -1,0 +1,8 @@
+docker run -d -it --name dep ubuntu sh -c echo "Input website:"; read website; echo "Searching.."; sleep 1; curl http://$website;
+docker exec -it dep bash
+root@08b612761e31:/# apt-get update
+root@08b612761e31:/# apt-get -y install curl
+docker start dep
+docker attach dep
+
+When attaching docker container doesn't print "Input website:", but when writing url and pressing Enter program works flawlesly
