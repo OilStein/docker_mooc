@@ -1,0 +1,6 @@
+"This is the secret message"
+
+docker run -it devopsdockeruh/pull_exercise
+
+I put "devopsdockeruh/pull_exercise" to docker hub search bar
+Password was written in readme
