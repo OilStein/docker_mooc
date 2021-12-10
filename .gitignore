@@ -2,9 +2,12 @@
 
 .DS_STORE
 
-/part1/1.13_hello_backend/example-backend/
-/part1/1.12_hello_frontend/example-frontend/
-/part1/1.14_environment/back/example-backend/
-/part1/1.14_environment/front/example-frontend/
+part1/1.12_hello_frontend/example-frontend/
 
-/part1/1.15_homework/homework
+part1/1.13_hello_backend/example-backend/
+
+part1/1.14_environment/back/example-backend/
+
+part1/1.14_environment/front/example-frontend/
+
+part1/1.15_homework/homework
