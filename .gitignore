@@ -1,4 +1,4 @@
-/temp/*
+/temp
 
 .DS_STORE
 
@@ -17,3 +17,8 @@ part2/2.5/scaling-exercise
 ml-kurkkumopo-backend
 ml-kurkkumopo-frontend
 ml-kurkkumopo-training
+
+part2/2.9/database
+
+part2/2.10/images
+part2/2.10/database
