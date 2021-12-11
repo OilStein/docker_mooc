@@ -1,0 +1,46 @@
+version: '3.9'
+
+services:
+  db:
+    image: postgres
+    restart: unless-stopped
+    environment:
+      POSTGRES_PASSWORD: postgres
+    container_name: db_postgres
+    expose:
+      - 5432
+
+  redis:
+    image: redis
+    container_name: cache
+    expose:
+      - 6739
+
+  nginx:
+    image: nginx
+    container_name: nginx
+    ports:
+      - 80:80
+    depends_on:
+      - frontend
+      - backend
+    volumes:
+      - ./nginx.conf:/etc/nginx/nginx.conf
+    
+
+  frontend:
+    image: env-front
+    container_name: frontend
+
+  backend:
+    image: env-backend
+    container_name: backend
+    links:
+      - redis
+      - db
+    environment:
+          - REDIS_HOST=cache
+          - POSTGRES_HOST=db_postgres
+    depends_on:
+      - db
+      - cache
