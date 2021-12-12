@@ -1,4 +1,4 @@
-/temp/*
+/temp
 
 .DS_STORE
 
@@ -11,3 +11,14 @@ part1/1.14_environment/back/example-backend/
 part1/1.14_environment/front/example-frontend/
 
 part1/1.15_homework/homework
+
+part2/2.5/scaling-exercise
+
+ml-kurkkumopo-backend
+ml-kurkkumopo-frontend
+ml-kurkkumopo-training
+
+part2/2.9/database
+
+part2/2.10/images
+part2/2.10/database

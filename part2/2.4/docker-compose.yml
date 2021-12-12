@@ -1,0 +1,22 @@
+version: '3.9'
+
+services:
+  redis:
+    image: redis
+    container_name: cache
+    expose:
+      - 6739
+
+  frontend:
+    image: env-front
+    ports:
+      - 5000:5000
+
+  backend:
+    image: env-backend
+    ports:
+      - 8080:8080
+    links:
+      - redis
+    environment:
+          - REDIS_HOST=cache
